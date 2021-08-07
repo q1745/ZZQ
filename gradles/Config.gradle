@@ -1,0 +1,24 @@
+def version=rootProject.ext.dependenciesVersion
+ext{
+    dependencies = [
+            retrofit:"com.squareup.retrofit2:retrofit:${version.retrofit}",
+            rxjava:"io.reactivex.rxjava2:rxjava:${version.rxjava}",
+            rxandroid:"io.reactivex.rxjava2:rxandroid:${version.rxandroid}",
+            interceptor:"com.squareup.okhttp3:logging-interceptor:${version.interceptor}",
+            okhttp:"com.squareup.okhttp3:okhttp:${version.okhttp}",
+            converter_gson:"com.squareup.retrofit2:converter-gson:${version.converter_gson}",
+            adapter_rxjava2:"com.squareup.retrofit2:adapter-rxjava2:${version.adapter_rxjava2}",
+            bottomNavigationBar:"com.ashokvarma.android:bottom-navigation-bar:${version.bottomNavigationBar}",
+            banner:"com.youth.banner:banner:${version.banner}",
+            stabar:"com.zackratos.ultimatebarx:ultimatebarx:${version.stabar}",
+            tab:"com.android.support:design:${version.tab}",
+            baseadapter:"com.github.CymChad:BaseRecyclerViewAdapterHelper:${version.baseadapter}"
+    ]
+
+
+    urls=[
+            offline:"http://39.98.153.96:8082/",
+            online:"http://39.98.153.96:8082/",
+            test:"http://39.98.153.96:8082/"
+    ]
+}

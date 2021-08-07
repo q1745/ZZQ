@@ -1,0 +1,17 @@
+ext {
+    dependenciesVersion= [
+        retrofit: "2.5.0",
+        compileSdkVersion: 30,
+        rxjava:"2.2.6",
+        rxandroid:"2.1.1",
+        interceptor:"3.11.0",
+        okhttp:"3.12.1",
+        converter_gson:"2.6.2",
+        adapter_rxjava2:"2.6.2",
+        bottomNavigationBar:"2.0.5",
+        banner:"1.4.10",
+        stabar:"0.6.0",
+        tab:"30.0.0",
+        baseadapter:"3.0.0"
+    ]
+}

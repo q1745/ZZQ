@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.net">
+
+    <application>
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="authcode"
+            android:value="381671fa18f13b19c1d21751d31251211e61ce15f1861fb1" />
+    </application>
+
+</manifest>

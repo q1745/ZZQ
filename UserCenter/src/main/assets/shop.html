@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+        <script
+            src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            /**
+            该方法为java调用的JavaScript方法
+            */
+            function setData(jsonSstr){
+                var data= JSON.parse(jsonSstr);
+                if(data!=undefined&&data!=null){
+                    $("#img_pic").attr("src",data.PictUrl);
+                    $("#goods_title").text(data.Title);
+                    $("#goods_seller").text("商家:"+data.Nick);
+                    $("#goods_address").text(data.Provcity);
+                    $("#goods_price").text("建议售价:"+data.ReservePrice);
+                    $("#goods_finalprice").text("价格:"+data.ZkFinalPrice);
+                    if(data.SmallImages!=undefined&&data.SmallImages!=null){
+                        for(var i=0;i<data.SmallImages.length;i++){
+                            $("#div_imgs").append(" <img
+                  src='"+data.SmallImages[i]+"' class='imgStyle' />");
+                        }
+                    }
+                }
+            }
+            // $(document).ready(function(){ // setData("{\"Nick\": \"qing199086\", \"NumIid\":
+567111047718, \"PictUrl\":
+\"https://img.alicdn.com/bao/uploaded/i1/1607053004/TB2MHKFckomBKNjSZFqXXXtqVXa_
+!!1607053004.jpg\", \"Provcity\": \"浙江 湖州\", \"ReservePrice\": \"63.7\",
+\"SmallImages\":
+[\"https://img.alicdn.com/i3/1607053004/TB2.Ibcif9TBuNjy1zbXXXpepXa_!!1607053004
+.jpg\",
+\"https://img.alicdn.com/i1/1607053004/TB2vj8ycijQBKNjSZFnXXa_DpXa_!!1607053004.
+jpg\",
+\"https://img.alicdn.com/i3/1607053004/TB20VzxihSYBuNjSspjXXX73VXa_!!1607053004.
+jpg\"], \"Title\": \"幼儿园园服春秋冬装运动一年级中小学生老师班服校服装定做\",
+\"ZkFinalPrice\": \"44.59\" }");
+            // });
+        </script>
+        <style>
+            .imgStyle{
+                width: 100%;
+            }
+
+            .divCenter{
+                display: flex;
+                justify-content:center;
+                flex-direction: column;
+            }
+
+            .divSpacebetween{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .fontStyle{
+                font-size: small;
+                color: gray;
+            }
+
+            .fontPrice{
+                font-size: large;
+                color: orangered;
+            }
+
+            div{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="divCenter">
+            <img id="img_pic" class="imgStyle" />
+        </div>
+        <div>
+            <label class="fontStyle" id="goods_title"></label>
+        </div>
+        <div class="divSpacebetween">
+            <label class="fontStyle" id="goods_seller"></label>
+            <label class="fontStyle" id="goods_address"></label>
+        </div> <div class="divSpacebetween">
+            <s id="goods_price" class="fontStyle"></s>
+            <label id="goods_finalprice" class="fontPrice"></label>
+        </div>
+        <hr/>
+        <div id="div_imgs" class="divCenter" style="margin-top: 30px;">
+        </div>
+    </body>
+</html>

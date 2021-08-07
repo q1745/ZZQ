@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".ui.RegActivity">
+
+
+    <EditText
+        android:layout_margin="10dp"
+        android:background="@drawable/ed_style"
+        android:id="@+id/ed_reg_phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <EditText
+        android:background="@drawable/ed_style"
+        android:layout_margin="10dp"
+        android:layout_height="50dp"
+        android:inputType="numberPassword"
+        android:id="@+id/ed_reg_pwd"
+        android:layout_width="match_parent" />
+    <Button
+        android:background="@drawable/btn_style"
+        android:text="注册"
+        android:id="@+id/btn_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
