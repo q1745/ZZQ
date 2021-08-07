@@ -34,7 +34,7 @@ class NewWorkStateReceiver : BroadcastReceiver(){
             }
         } else {
             println("API 大于23")
-
+            println("我是伞兵志强")
             val connMgr = MyApplication.mContext!!.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
             val works: MutableList<Network> = connMgr.allNetworks.toMutableList()
